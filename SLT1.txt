@@ -1,0 +1,812 @@
+                                                       TASK1
+                             
+1.write the logic to check total male and female
+  1.start
+  2.start taking the males and females
+  3.if the gender is male,then male
+  4.if the gender is female,then female
+  5.compare how many males and females citizen are present
+  6.stop
+
+
+
+2.write the logic to check how many citizens are graduated
+   1.start
+   2.start taking the deatils of citizen like id,gender,age,qualification,city,state,country,employment status and martial status
+   3.check the citizens are graduated or post graduated.
+   4.count the graduated citizen
+   5.check if some more citizen are graduated citizen and count the numbers
+   6.stop
+
+
+
+3.write the logic to check how many citizen is having income more than 1 lakh per month
+   1.start
+   2.start taking the citizen details.
+   3.check the number of citizen having salary greater than 1 lakh per month
+   4.count the citizen
+   5.check some more citizen having greater than 1 lakh per month and goto step2
+   6.stop
+
+
+4.write the logic to check how many are married,single and widow
+   1.start
+   2.check the martial status of citizen
+   3.count the number of married citizen
+   4.count the number of single citizen
+   5.count the number of widow citizen
+   6.compare them with the total number of married,single and widow citizen and goto step2.
+   7.stop 
+______________________________________________________________________________________________________________________________________________________________________
+                                                       TASK2
+write a program accept the customers details like:-
+1.customerId----string---
+2.customerName----string--
+3.customerGender----string---
+4.customerAddress----string---
+5.customercity----string---
+6.customerCountry----string---
+7.customerpin----string---
+8.customerAge----int---
+9.customerphone----string---
+10.customerAreaofinterest----string---
+11.customerDob----string---
+validate:
+1.customerId should starts with char 'c' and it length should be 4
+2.customerGender----should allow only male and female
+Analysis:
+1.check and display total male and female count
+2.check and display total customers belong to pune city
+
+package slt;
+
+import java.util.Scanner;
+
+public class Customer {
+	String id,name,gender,address,city,country,pin,phn,interest,dob;
+	int age;
+	Scanner s=new Scanner(System.in);
+	void get()
+	{
+
+		System.out.println("enter customer id");
+		id=s.next();
+		System.out.println("enter customer name");
+		name=s.next();
+		System.out.println("enter customer gender");
+		gender=s.next();
+		System.out.println("enter customer age");
+		age=s.nextInt();
+		System.out.println("enter customer address");
+		address=s.next();
+		System.out.println("enter customer city");
+		city=s.next();
+		System.out.println("enter customer country");
+		country=s.next();
+		System.out.println("enter customer pin");
+		pin=s.next();
+                System.out.println("enter customer phone");
+		phn=s.next();
+		System.out.println("enter customer interest");
+		interest=s.next();
+		System.out.println("enter customer dob");
+		dob=s.next();
+		
+	}
+	
+void check()
+{
+	if((customer id.length()==4)&&(customer id.charAt(0)=='c'))
+	{
+		System.out.println("valid customer");
+	}
+	else
+	{
+		System.out.println("invalid customer");
+		
+	}
+}
+void check1()
+{
+	if(((customer gender.equals("male")))||((customer gender.equals("female"))))
+			{
+		System.out.println("allowed for accesing");
+		
+			}
+	else
+	{
+		System.out.println("not allowed for accesing");
+	}
+}
+void validate()
+{
+	if(((customer gender).equals("male")))
+	{
+		int total=0;
+		total=total+1;
+		System.out.println("male:"+total);
+	}
+	else
+	{
+		if((customer gender).equals("female"))
+		{
+			int total1=0;
+			total1=total1+1;
+			System.out.println("female count"+total1);
+		}
+		else
+		{
+			System.out.println("acccessing restricted");
+		}
+	}
+}
+void validate1()
+{
+	if(((customer city).equals("pune")))
+	{
+		int total2=0;
+		total2=total2+1;
+		System.out.println("peoples belong to pune area"+total2);
+	}
+	else
+	{
+		System.out.println("customer not belonged to pune");
+	}
+}
+public static void main(String args[])
+{
+Customer c=new Customer();
+c.get();
+c.check();
+c.check1();
+c.validate();
+v.validate1();
+}
+}
+_______________________________________________________________________________________________________________________________________________________________________
+2.write a program to create a webpage to accept citizen details of india like
+aadharcardnumber---string
+name---string
+gender---string
+dateofbirth--string
+address---string
+city---string
+country--string
+pin--string
+phone--string
+educationdetails---string
+age---int
+workingstatus--string
+martialstatus---string
+salary---int
+numberofdependts--int
+validate the data
+1)gender---should allow only male and female
+2)educationdetails---only 10th,12th,graduate,phd,pg
+3)workingstatus--must enter yes or no
+4)martialstatus---must enter yes r not
+5)salary----value should not be less than 0 or negative
+
+package slt;
+
+import java.util.Scanner;
+
+public class Web {
+	public static void main(String args[])
+	{
+	Scanner a=new Scanner(System.in);
+	String cardNumber,name,gender,dateOfBirth,address,city,country,pin,phone,educationDetails,workingStatus,martialStatus;
+	int age,salary,dependents,n;
+	System.out.println("how many citizens details u wanna enter");
+	n=a.nextInt();
+	for(int i=1;i<=n;i++)
+	{
+		System.out.println(" enter card number");
+		cardNumber=a.next();
+		System.out.println(" enter name");
+		name=a.next();
+		System.out.println(" enter gender");
+		gender=a.next();
+		System.out.println(" enter date of birth");
+		dateOfBirth=a.next();
+		System.out.println(" enter address");
+		address=a.next();
+		System.out.println(" enter city");
+		city=a.next();
+		System.out.println(" enter country");
+		country=a.next();
+		System.out.println("enter pin");
+		pin=a.next();
+		System.out.println(" enter phone");
+		phone=a.next();
+		System.out.println("enter education");
+		educationDetails=a.next();
+		System.out.println(" enter martialstaus");
+		martialStatus=a.next();
+		System.out.println("enter workingstatus");
+		workingStatus=a.next();
+		System.out.println("enter age");
+		age=a.nextInt();
+		System.out.println(" enter depents");
+		dependents=a.nextInt();
+		System.out.println(" enter salary");
+		salary=a.nextInt();
+		if(gender.equals("male")||gender.equals("female"))
+		{
+			continue;
+		}
+		else
+		{
+			System.out.println("gender should be male or female");
+		}
+		if(educationDetails.equals("10th")||educationDetails.equals("12th")||educationDetails.equals("graduate")||educationDetails.equals("phd")||educationDetails.equals("pg"))
+		{
+			continue;
+		}
+		else
+		{
+		System.out.println("educationDetails should be 10th 12th graduate phd pg");	
+		}
+		if(workingStatus.equals("yes")||workingStatus.equals("no"))
+		{
+			continue;
+		}
+		else
+		{
+			System.out.println(" for working u have to enter only yes r no");
+		}
+		if(martialStatus.equals("yes")||workingStatus.equals("no"))
+		{
+			continue;
+		}
+		else
+		{
+			System.out.println("for martial u have to enter only yes r no");
+		}
+		if(salary<0)
+		{
+			System.out.println("salary should not be less than or equal to zero");
+		}
+	}
+	
+	
+	
+	
+	}
+}
+
+____________________________________________________________________________________________________________________________________________________________________________________________
+                                                       
+                                                                  TASK-3
+1.write a jave program to create four function for add,sub,muland div
+1.all function must have variable fpr accepting two numbers using arguments and display the result
+2.all the function must be called inside main function without using object
+3.all the function must return the result to the calling function
+
+package calculation;
+
+import java.util.Scanner;
+
+s class Ari 
+{
+	static Scanner k=new Scanner(System.in);
+ static int Add(int x,int y)
+{
+	System.out.println("Enter the number");
+	x=k.nextInt();
+    y=k.nextInt();
+    int c;
+    c=x+y;
+    System.out.println(c);
+    return c;
+}
+static int Sub(int x,int y)
+{
+	
+	System.out.println("Enter the number");
+    x=k.nextInt();
+	y=k.nextInt();
+	int c;
+	c=x-y;
+	System.out.println(c);
+	return c;
+}
+ static int mul(int x,int y)
+ {
+	 
+	 System.out.println("Enter the number");
+	 x=k.nextInt();
+	 y=k.nextInt();
+     int c;
+     c=x*y;
+     System.out.println(c);
+	 return c;
+	 
+ }
+static int div(int x,int y)
+{
+
+	System.out.println("Enter the number");	
+	x=k.nextInt();
+	y=k.nextInt();
+	int c;
+	c=x/y;
+	System.out.println(c);
+	return c;
+}
+public static void main(String args[])
+{
+	Ari.Add(2,3);
+	Ari.Sub(4,3);
+	Ari.mul(2,6);
+	Ari.div(2,3);
+}
+}
+_______________________________________________________________________________________________________________________________________________________________________
+                                                                    
+                                                                     TASK-4
+1.write a program in java to accept student details like
+studentid -must start with s followed by 4 char
+student name-string
+student age-int must not be greater than 100
+student city-string
+student country-string obly india is allowed
+ANALYSIS
+Accept the details of 10 student
+display the total number of counts whose age is greater than 21
+belongs to similar city
+
+package slt;
+
+import java.util.Scanner;
+
+spublic class Student 
+{ 
+   public static void main(String args[])
+	{
+	   for(int i=0;i<10;i++)
+	   {
+	String studentid;
+	String name;
+	int  studentage;
+	String studentcity;
+	String studentcountry;
+	Scanner k=new Scanner(System.in);
+	System.out.println("Enter studentid");
+	studentid=k.next();
+	if(studentid.charAt(0)=='s'&& studentid.length()==4)
+	  {
+		  System.out.println("valid student");
+		  
+	  }
+     System.out.println("Enter name");
+	name=k.next();
+	System.out.println("Enter studentage");
+	studentage=k.nextInt();
+	System.out.println("Enter Studentcity");
+	studentcity=k.next();
+	System.out.println("Enter studentcountry");
+	studentcountry=k.next();
+  if(studentage>21)
+{
+	int count=0;
+	System.out.println("valid student");
+	count=count+1;
+}
+if(studentcountry.equals("India"))
+{
+	System.out.println("valid country");
+}
+
+}
+_________________________________________________________________________________________________________________________________________________________________________
+2.write a program to accept the details of 10 employees like
+Empid-string
+empname-string
+empage-int
+empsal-int
+empdept-string
+display the name of employee who earn maximum
+display the name of employee who is elder to all
+
+package slt;
+
+import java.util.Scanner;
+
+public class Emp 
+{
+public static void main(String args[])
+{
+	String empid;
+	String empname;
+	int  empage;
+	int  empsal;
+	int max=0,max1=0;
+	String empdept;
+    String n=null,n1=null;
+    String id1=null,id2=null;
+	Scanner a=new Scanner(System.in);
+	for(int i=0;i<10;i++)
+	{
+	System.out.println("Enter empid");
+	empid=a.next();
+	System.out.println("Enter empname");
+	empname=a.next();
+	System.out.println("Enter empage");
+	empage=a.nextInt();
+	System.out.println("Enter empsal");
+	empsal=a.nextInt();
+	System.out.println("Enter empdept");
+	empdept=a.next();
+	if(empsal>max)
+	{
+		max=empsal;
+		n=empname;
+		id1=empid;
+		
+	}
+   if(empage>max1)
+   {
+	   max1=empage;
+	   n1=empname;
+	   id2=empid;
+	   
+   }
+  System.out.println("the name and the id of the employee who is elder to all is"+n1+""+id2+"and the age is"+max1);
+	
+ System.out.println("the name and the id of the employee who earns maximum  is"+n+""+id1+"and the salary is"+max);
+	
+	}	
+}
+}
+_____________________________________________________________________________________________________________________________________________________________________
+
+                                                                TASK-5
+1.Write a java program to accept a number of any digit and reverse the number
+
+package slt;
+
+import java. util.Scanner;
+
+public class Reverse 
+{
+   public static void main(String args[])
+  {
+    int num,sum=0;
+    System.out.println("Enter the number");
+    Scanner s = new Scanner(System.in);
+    num=s.nextInt();
+ while(num!=0)
+ {
+	 sum=sum*10;
+	 sum=sum+num%10;
+	 num=num/10;
+ }
+ System.out.println(sum);
+}
+}
+_____________________________________________________________________________________________________________________________________________________________________
+2.write a menu driven program for calculator using java.Menu details are
+1.Addition
+2.subtraction
+3.multiplication
+4.division
+5.percentage
+6.exit
+
+package slt;
+
+import java.util.Scanner;
+
+public class Calcu
+{
+
+public static void main(String args[])
+{
+	int a;
+	int b;
+	int result;
+	int c;
+	Scanner k = new Scanner(System.in);
+	do
+	{
+		System.out.println("Enter the number");
+		a=k.nextInt();
+		b=k.nextInt();
+		System.out.println("menu");
+		System.out.println("Enter ur choice");
+		System.out.println("1.Addition");
+		System.out.println("2.Subtraction");
+		System.out.println("3.multiplication");
+		System.out.println("4.Division");
+		System.out.println("5.percentage");
+		System.out.println("6.exit");
+		c=k.nextInt();
+		switch(c)
+		{
+		case 1:
+		{
+         	result=a+b;
+			System.out.println(result);
+			break;
+		}
+		case 2:
+		{
+			result=a-b;
+			System.out.println(result);
+			break;
+		}
+		case 3:
+		{
+			result=a*b;
+			System.out.println(result);
+			break;
+		}
+		case 4:
+		{
+			result=a/b;
+			System.out.println(result);
+			break;
+		}
+		case 5:
+		{
+			result=a%b;
+			System.out.println(result);
+			break;
+		}
+		case 6:
+		{
+			break;
+		}
+		}
+	}
+		while(c!=6);
+			
+}
+}
+____________________________________________________________________________________________________________________________________________________________________
+3.write a program in java to accept the details of 10 employee.Display the total bonus given to the employee during festival seasons.Bonus criteria is given below
+if salary is 10000 bonus will be 30%
+if salary is 50000 bonus will be 20%
+if salary is 100000 bonus will be 10%
+
+package slt;
+
+import java.util.Scanner;
+
+public class Salary
+{
+public static void main(String args[])
+{
+	Scanner o=new Scanner(System.in);
+	String Name;
+	long  Salary;
+	for(int i=1;i<=10;i++)
+	{
+		System.out.println("Enter name");
+	    Name=o.next();
+        System.out.println("Enter salary");
+	    Salary=o.nextLong();
+	    if(Salary==10000)
+	    {
+	    	int bonus;
+	    	System.out.println("ur bonus vill be 30 percent");
+	    	bonus=(int) ((Salary/100)*30);
+	    	System.out.println(bonus);
+	    }
+	    else if(Salary==50000)
+	    {
+	    	int bonus;
+	    	System.out.println("ur bonus vill be 20 percent");
+	    	bonus=(int) ((Salary/100)*30);
+	    	System.out.println(bonus);
+	    }
+	    else if(Salary==100000)
+	    {
+	    	int bonus;
+	    	System.out.println("ur bonus vill be 10 percent");
+	    	bonus=(int) ((Salary/100)*30);
+	    	System.out.println(bonus);
+	    }
+}
+
+}
+}
+_______________________________________________________________________________________________________________________________________________________________________
+4.write a program to accept movie details like
+1.movieName
+2.movieid
+3.actorname
+4.directorname
+5.yearofrealese
+6.language(hindi,english,chinese)
+7.totalIncome
+8.rating(1-5)
+i)total number of movies release
+ii)totalincome of all the movies
+iii)total movie of rating
+iv)totalmovies language wise
+v)total movies with director name"john d"
+
+package slt;
+
+import java.util.Scanner;
+
+public class Movie {
+	public static void main(String args[])
+	{
+		Scanner a=new Scanner(System.in);
+		String movieName,movieId,actorName,directorName,language;
+		int totalIncome,rating,year,duration,n,count=0,amount=0,r=0,v=0,d=0;
+		System.out.println("how many movie details u want to be entered");
+		n=a.nextInt();
+		for(int i=1;i<=n;i++)
+		{
+			System.out.println("enter the movieid");
+			movieId=a.next();
+			System.out.println("enter the moviename");
+			movieName=a.next();
+			System.out.println("enter the actorname");
+			actorName=a.next();
+			System.out.println("enter the directorname");
+			directorName=a.next();
+			System.out.println("enter the movie language");
+			language=a.next();
+			System.out.println("enter the yearofrelease");
+			year=a.nextInt();
+			System.out.println("enter the totalincome");
+			totalIncome=a.nextInt();
+			System.out.println("enter the rating");
+			rating=a.nextInt();
+			System.out.println("enter the duration");
+			duration=a.nextInt();
+				System.out.println("movie id "+movieId +"   moviename "+movieName);
+				count++;
+				System.out.println(count+" is added");
+				amount=totalIncome+amount;
+				System.out.println(amount+"  totalincome");
+				if(rating>=4)
+				{
+					r++;
+					System.out.println(r+"  movies rated greater than equal to 4");
+			
+				
+			}
+				if(language.equals("english")){
+					v++;
+					System.out.println(v+" englishmovie in the details" );
+				}
+				else if(language.equals("hindi"))
+				{
+					v++;
+					System.out.println(v+" hindimovie in the details" );
+				}
+				else
+				{
+					v++;
+					System.out.println(v+" chinesemovie in the details" );
+					
+				}
+				if(directorName.equals("john D"))
+				{
+					d++;
+					System.out.println(d+" director john d movies in the details");
+				}
+		}
+		
+	}
+
+_____________________________________________________________________________________________________________________________________________________________________
+
+                                                             TASK-6
+1.Write a program to accept three number and display highest number using condition only
+
+package slt;
+
+import java.util.Scanner;
+
+public class Greatest 
+{
+public static void main(String args[])
+{
+	int a;
+	int b;
+	int c;
+	Scanner obj=new Scanner(System.in);
+    System.out.println("Enter the number");
+    a=obj.nextInt();
+    System.out.println("Enter the number");
+    b=obj.nextInt();
+    System.out.println("Enter the number");
+    c=obj.nextInt();
+    if(a>b)
+    {
+    	if(a>c)
+    	{
+    		System.out.println("a is greater"+a);
+    	}
+    		else if(b>c)
+    		{
+    			System.out.println("b is greater"+b);
+    		}
+    }
+    		else 
+    		{
+    			System.out.println("c is greater"+c);
+    		}
+    }
+    
+    	
+ }
+_____________________________________________________________________________________________________________________________________________________________________
+2.write a program to accept a string and check whether third character of string is 's' or not
+
+package slt;
+
+import java.util.Scanner;
+
+public class Acc 
+{
+public static void main(String args[])
+{
+	Scanner a=new Scanner(System.in);
+	String name;
+	System.out.println("Enter for String");
+	name=a.next();
+	if((name.charAt(2))!='s')
+	{
+		System.out.println("s is not found");
+	
+	}
+	else
+	{
+		System.out.println("s is found");
+	}
+}
+_______________________________________________________________________________________________________________________________________________________________________
+3.write a program to accept a string and display the last character of the string without using readmade string function.
+
+package slt;
+
+import java.util.Scanner;
+
+public class Str
+{
+public static void main(String args[])
+{
+	String name;
+	char l = 0;
+	Scanner k=new Scanner(System.in);
+	System.out.println("Enter string");
+	name=k.next();
+    for(int i=0;i<name.length();i++)
+    {
+      l=name.charAt(i);
+    }
+	System.out.println(l);
+}
+}
+_____________________________________________________________________________________________________________________________________________________________________
+4..write a program to accept the string and replace third character with 'T' without using readymade function
+
+package slt;
+
+import java.util.Scanner;
+
+public class Stc 
+{
+public static void main(String args[])
+{
+	String name;
+	Scanner o=new Scanner(System.in);
+	System.out.println("Enter String");
+	name=o.nextLine();
+        char ch[]=name.toCharArray();
+        ch[3]='t';
+        int val=name.length();
+	for(int i=0;i<val;i++)
+	{
+           System.out.println(ch[i]);
+	}
+}
+_________________________________________________________________________________________________________________________________________________________________________s
